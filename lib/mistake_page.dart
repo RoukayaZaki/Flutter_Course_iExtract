@@ -22,20 +22,22 @@ class _MistakePageState extends State<MistakePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Mistakes Page'),
+        backgroundColor : Color.fromRGBO(122, 55, 11, 1),
+
       ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             /*color: Color.fromRGBO(247, 250, 235, 1),*/
-            width: 1000,
+            width: 350,
             padding: EdgeInsets.only(top:25),
             child: FutureBuilder(
               future: widget.files[_currentFile],
               builder: (context, snapshot){
 
                 //TODO: Add again after resolving the problem
-              /*  if(snapshot.data == null){
+                /*  if(snapshot.data == null){
                   return  LinearProgressIndicator(
                     backgroundColor: Colors.cyanAccent,
                     valueColor: new AlwaysStoppedAnimation<Color>(Colors.red),
@@ -44,7 +46,7 @@ class _MistakePageState extends State<MistakePage> {
 
                 List<Mistake> data = ((snapshot.data as MistakeFile).mistakes).toList();
 */
-               List<Mistake> data = mistakes.toList();
+                List<Mistake> data = mistakes.toList();
 
                 if(data.isNotEmpty){
                   //To Use Dummy Data in case there is a server error
@@ -69,7 +71,7 @@ class _MistakePageState extends State<MistakePage> {
             ),
           ),
 
-         /* Container(
+          /* Container(
             width: 300,
             child: ListView.builder(
               padding: const EdgeInsets.all(10),
