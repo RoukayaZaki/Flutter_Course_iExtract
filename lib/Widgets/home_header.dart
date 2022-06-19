@@ -7,8 +7,8 @@ class HomeHeader extends StatelessWidget {
     // Figma Flutter Generator Rectangle5Widget - COMPONENT
     return Container(
         width: 720,
-        height: 275,
-        color: Color.fromRGBO(242, 238, 225, 1),
+        height: 150,
+        //color: Color.fromRGBO(242, 238, 225, 1),
         child:  Align(
           alignment: Alignment.center,
           child: Text(
@@ -17,9 +17,9 @@ class HomeHeader extends StatelessWidget {
             style: TextStyle(
                 color: Color.fromRGBO(122, 55, 11, 1),
                 fontFamily: 'Eczar',
-                fontSize: 128,
+                fontSize: 90,
                 letterSpacing:
-                    0 /*percentages not used in flutter. defaulting to zero*/,
+                0 /*percentages not used in flutter. defaulting to zero*/,
                 fontWeight: FontWeight.normal,
                 height: 1),
           ),
