@@ -1,5 +1,3 @@
-import 'package:FixMyEnglish/file_download.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:substring_highlight/substring_highlight.dart';
 import 'package:syncfusion_flutter_pdf/pdf.dart';
@@ -9,14 +7,14 @@ import 'file.dart';
 import 'mistake_page.dart';
 import 'mistake_api.dart';
 
-Future<FilePickerResult?> mistakeFromPDF() async {
+/*Future<FilePickerResult?> mistakeFromPDF() async {
   FilePickerResult? result = await FilePicker.platform.pickFiles(
     allowMultiple: true,
     type: FileType.custom,
     allowedExtensions: ['pdf'],
   );
   return result;
-}
+}*/
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -63,7 +61,7 @@ class HomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
+             /* Padding(
                 padding: const EdgeInsets.only(right: 250.0),
                 child: ElevatedButton(
                   onPressed: () async {
@@ -101,7 +99,7 @@ class HomePage extends StatelessWidget {
                         height: 1.5),
                   ),
                 ),
-              ),
+              ),*/
               ElevatedButton(
                 onPressed: () {
                   List<Future<MistakeFile>> files = [];
@@ -113,7 +111,7 @@ class HomePage extends StatelessWidget {
                       const Color.fromRGBO(233, 241, 232, 1)),
                 ),
                 child: const Text(
-                  'Upload Text',
+                  'Analyze Text',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color.fromRGBO(73, 69, 7, 1),
